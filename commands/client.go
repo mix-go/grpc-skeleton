@@ -29,5 +29,5 @@ func (t *GrpcClientCommand) Main() {
     if err != nil {
         panic(err)
     }
-    fmt.Println(fmt.Sprintf("Add : %d", resp.UserId))
+    fmt.Println(fmt.Sprintf("Add User: %d", resp.UserId))
 }
