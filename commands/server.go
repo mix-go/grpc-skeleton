@@ -1,8 +1,6 @@
 package commands
 
 import (
-    "context"
-    "fmt"
     "github.com/mix-go/mix-grpc-skeleton/globals"
     pb "github.com/mix-go/mix-grpc-skeleton/protos"
     "google.golang.org/grpc"
@@ -11,7 +9,6 @@ import (
     "os/signal"
     "strings"
     "syscall"
-    "time"
 )
 
 const Addr = ":8181"
@@ -44,28 +41,4 @@ func (t *GrpcServerCommand) Main() {
     if err := s.Serve(listener); err != nil && !strings.Contains(err.Error(), "use of closed network connection") {
         panic(err)
     }
-}
-
-type GrpcClientCommand struct {
-}
-
-func (t *GrpcClientCommand) Main() {
-    ctx, _ := context.WithTimeout(context.Background(), time.Duration(5)*time.Second)
-    conn, err := grpc.DialContext(ctx, Addr, grpc.WithInsecure(), grpc.WithBlock())
-    if err != nil {
-        panic(err)
-    }
-    defer func() {
-        _ = conn.Close()
-    }()
-
-    cli := pb.NewUserClient(conn)
-    req := pb.AddRequest{
-        Name: "xiaoliu",
-    }
-    resp, err := cli.Add(ctx, &req)
-    if err != nil {
-        panic(err)
-    }
-    fmt.Println(fmt.Sprintf("Add order: %d", resp.OrderId))
 }

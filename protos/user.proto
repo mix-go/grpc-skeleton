@@ -14,5 +14,5 @@ message AddRequest {
 message AddResponse {
     int32 error_code = 1;
     string error_message = 2;
-    int64 order_id = 3;
+    int64 user_id = 3;
 }

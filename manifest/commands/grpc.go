@@ -9,32 +9,18 @@ func init() {
     Commands = append(Commands,
         console.CommandDefinition{
             Name:  "grpc:server",
-            Usage: "\tEcho demo",
+            Usage: "\tServer demo",
             Options: []console.OptionDefinition{
                 {
-                    Names: []string{"n", "name"},
-                    Usage: "Your name",
-                },
-                {
-                    Names: []string{"say"},
-                    Usage: "\tSay ...",
+                    Names: []string{"d", "daemon"},
+                    Usage: "Run in the background",
                 },
             },
             Command: &commands.GrpcServerCommand{},
         },
         console.CommandDefinition{
-            Name:  "grpc:client",
-            Usage: "\tEcho demo",
-            Options: []console.OptionDefinition{
-                {
-                    Names: []string{"n", "name"},
-                    Usage: "Your name",
-                },
-                {
-                    Names: []string{"say"},
-                    Usage: "\tSay ...",
-                },
-            },
+            Name:    "grpc:client",
+            Usage:   "\tClient demo",
             Command: &commands.GrpcClientCommand{},
         },
     )

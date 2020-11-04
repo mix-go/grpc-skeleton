@@ -11,12 +11,11 @@ import (
 type UserService struct {
 }
 
-func (t *UserService) Add(context.Context, *pb.AddRequest) (*pb.AddResponse, error) {
+func (t *UserService) Add(ctx context.Context, in *pb.AddRequest) (*pb.AddResponse, error) {
     db := globals.DB()
     user := models.User{
-        ID:       0,
-        Name:     "",
-        CreateAt: time.Time{},
+        Name:     in.Name,
+        CreateAt: time.Now(),
     }
     if err := db.Create(&user).Error; err != nil {
         return nil, err
@@ -24,7 +23,7 @@ func (t *UserService) Add(context.Context, *pb.AddRequest) (*pb.AddResponse, err
     resp := pb.AddResponse{
         ErrorCode:    0,
         ErrorMessage: "",
-        OrderId:      user.ID,
+        UserId:       user.ID,
     }
     return &resp, nil
 }
