@@ -3,6 +3,7 @@ package commands
 import (
     "github.com/mix-go/mix-grpc-skeleton/globals"
     pb "github.com/mix-go/mix-grpc-skeleton/protos"
+    "github.com/mix-go/mix-grpc-skeleton/services"
     "google.golang.org/grpc"
     "net"
     "os"
@@ -36,7 +37,7 @@ func (t *GrpcServerCommand) Main() {
     }()
 
     s := grpc.NewServer()
-    pb.RegisterUserServer(s, &UserService{})
+    pb.RegisterUserServer(s, &services.UserService{})
     logger.Infof("Server run %s", Addr)
     if err := s.Serve(listener); err != nil && !strings.Contains(err.Error(), "use of closed network connection") {
         panic(err)
