@@ -9,7 +9,7 @@ func init() {
     Commands = append(Commands,
         console.CommandDefinition{
             Name:  "grpc:server",
-            Usage: "\tServer demo",
+            Usage: "Server demo",
             Options: []console.OptionDefinition{
                 {
                     Names: []string{"d", "daemon"},
@@ -20,7 +20,7 @@ func init() {
         },
         console.CommandDefinition{
             Name:    "grpc:client",
-            Usage:   "\tClient demo",
+            Usage:   "Client demo",
             Command: &commands.GrpcClientCommand{},
         },
     )

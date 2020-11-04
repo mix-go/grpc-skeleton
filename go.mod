@@ -13,7 +13,8 @@ replace (
 
 require (
 	github.com/go-redis/redis/v8 v8.0.0-beta.7
-	github.com/jinzhu/configor v1.2.0 // indirect
+	github.com/golang/protobuf v1.4.2
+	github.com/jinzhu/configor v1.2.0
 	github.com/jinzhu/gorm v1.9.16
 	github.com/mix-go/bean v1.0.16
 	github.com/mix-go/console v1.0.18
@@ -22,6 +23,8 @@ require (
 	github.com/mix-go/logrus v1.0.18
 	github.com/mix-go/workerpool v1.0.18
 	github.com/sirupsen/logrus v1.6.0
+	google.golang.org/grpc v1.30.0
+	google.golang.org/protobuf v1.23.0
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 	gorm.io/gorm v0.2.34 // indirect
 )
