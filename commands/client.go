@@ -3,7 +3,7 @@ package commands
 import (
     "context"
     "fmt"
-    pb "github.com/mix-go/mix-grpc-skeleton/protos"
+    pb "github.com/mix-go/grpc-skeleton/protos"
     "google.golang.org/grpc"
     "time"
 )

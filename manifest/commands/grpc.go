@@ -2,7 +2,7 @@ package commands
 
 import (
     "github.com/mix-go/console"
-    "github.com/mix-go/mix-grpc-skeleton/commands"
+    "github.com/mix-go/grpc-skeleton/commands"
 )
 
 func init() {

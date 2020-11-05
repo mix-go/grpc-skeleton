@@ -2,9 +2,9 @@ package services
 
 import (
     "context"
-    "github.com/mix-go/mix-grpc-skeleton/globals"
-    "github.com/mix-go/mix-grpc-skeleton/models"
-    pb "github.com/mix-go/mix-grpc-skeleton/protos"
+    "github.com/mix-go/grpc-skeleton/globals"
+    "github.com/mix-go/grpc-skeleton/models"
+    pb "github.com/mix-go/grpc-skeleton/protos"
     "time"
 )
 

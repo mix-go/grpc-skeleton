@@ -1,9 +1,9 @@
 package commands
 
 import (
-    "github.com/mix-go/mix-grpc-skeleton/globals"
-    pb "github.com/mix-go/mix-grpc-skeleton/protos"
-    "github.com/mix-go/mix-grpc-skeleton/services"
+    "github.com/mix-go/grpc-skeleton/globals"
+    pb "github.com/mix-go/grpc-skeleton/protos"
+    "github.com/mix-go/grpc-skeleton/services"
     "google.golang.org/grpc"
     "net"
     "os"

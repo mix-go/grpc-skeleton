@@ -1,4 +1,4 @@
-module github.com/mix-go/mix-grpc-skeleton
+module github.com/mix-go/grpc-skeleton
 
 go 1.13
 
