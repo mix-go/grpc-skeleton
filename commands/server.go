@@ -20,11 +20,13 @@ type GrpcServerCommand struct {
 func (t *GrpcServerCommand) Main() {
     logger := globals.Logger()
 
+    // listen
     listener, err := net.Listen("tcp", Addr)
     if err != nil {
         panic(err)
     }
 
+    // signal
     ch := make(chan os.Signal)
     signal.Notify(ch, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM)
     go func() {
@@ -35,8 +37,12 @@ func (t *GrpcServerCommand) Main() {
         }
     }()
 
+    // server
     s := grpc.NewServer()
     pb.RegisterUserServer(s, &services.UserService{})
+
+    // run
+    welcome()
     logger.Infof("Server run %s", Addr)
     if err := s.Serve(listener); err != nil && !strings.Contains(err.Error(), "use of closed network connection") {
         panic(err)

@@ -20,7 +20,6 @@ func (t *GrpcClientCommand) Main() {
     defer func() {
         _ = conn.Close()
     }()
-
     cli := pb.NewUserClient(conn)
     req := pb.AddRequest{
         Name: "xiaoliu",
