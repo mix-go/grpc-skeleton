@@ -18,7 +18,6 @@ type GrpcServerCommand struct {
 }
 
 func (t *GrpcServerCommand) Main() {
-
     logger := globals.Logger()
 
     listener, err := net.Listen("tcp", Addr)
