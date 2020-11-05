@@ -12,7 +12,7 @@ import (
     "syscall"
 )
 
-const Addr = ":8181"
+const Addr = ":8080"
 
 type GrpcServerCommand struct {
 }
