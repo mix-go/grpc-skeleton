@@ -15,11 +15,11 @@ require (
 	github.com/golang/protobuf v1.4.2
 	github.com/jinzhu/configor v1.2.0
 	github.com/jinzhu/gorm v1.9.16
-	github.com/mix-go/bean v1.0.21
-	github.com/mix-go/console v1.0.21
-	github.com/mix-go/dotenv v1.0.21
-	github.com/mix-go/event v1.0.21
-	github.com/mix-go/logrus v1.0.21
+	github.com/mix-go/bean v1.0.22
+	github.com/mix-go/console v1.0.22
+	github.com/mix-go/dotenv v1.0.22
+	github.com/mix-go/event v1.0.22
+	github.com/mix-go/logrus v1.0.22
 	github.com/sirupsen/logrus v1.6.0
 	google.golang.org/grpc v1.30.0
 	google.golang.org/protobuf v1.23.0
