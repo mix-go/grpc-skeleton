@@ -14,6 +14,8 @@ import (
 
 const Addr = ":8080"
 
+var Listener net.Listener
+
 type GrpcServerCommand struct {
 }
 
@@ -25,6 +27,7 @@ func (t *GrpcServerCommand) Main() {
     if err != nil {
         panic(err)
     }
+    Listener = listener
 
     // signal
     ch := make(chan os.Signal)
