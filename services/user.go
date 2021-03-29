@@ -12,7 +12,7 @@ type UserService struct {
 }
 
 func (t *UserService) Add(ctx context.Context, in *pb.AddRequest) (*pb.AddResponse, error) {
-    db := globals.DB()
+    db := globals.Gorm()
     user := models.User{
         Name:     in.Name,
         CreateAt: time.Now(),

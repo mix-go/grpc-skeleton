@@ -1,15 +1,22 @@
 ## Mix gRPC Skeleton
 
-框架 gRPC 骨架代码，包含很多代码范例，开箱即用
-
-- 安装开发工具
+- Install
 
 ~~~
-go get -u github.com/mix-go/mix
+go get -u github.com/mix-go/xstart
 ~~~
 
-- 创建应用骨架
+- New project
 
 ~~~
-mix grpc --name=hello
+xstart new hello
 ~~~
+
+~~~
+ Use the arrow keys to navigate: ↓ ↑ → ← 
+ ? Select project type:
+     CLI
+     API
+     Web (contains the websocket)
+   ▸ gRPC
+ ~~~

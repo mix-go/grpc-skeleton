@@ -3,7 +3,8 @@ package commands
 import (
     "context"
     "fmt"
-    pb "github.com/mix-go/grpc-skeleton/protos"
+	"github.com/mix-go/dotenv"
+	pb "github.com/mix-go/grpc-skeleton/protos"
     "google.golang.org/grpc"
     "time"
 )
@@ -12,8 +13,9 @@ type GrpcClientCommand struct {
 }
 
 func (t *GrpcClientCommand) Main() {
+	addr := dotenv.Getenv("GIN_ADDR").String(":8080")
     ctx, _ := context.WithTimeout(context.Background(), time.Duration(5)*time.Second)
-    conn, err := grpc.DialContext(ctx, Addr, grpc.WithInsecure(), grpc.WithBlock())
+    conn, err := grpc.DialContext(ctx, addr, grpc.WithInsecure(), grpc.WithBlock())
     if err != nil {
         panic(err)
     }
