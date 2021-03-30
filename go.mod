@@ -17,7 +17,7 @@ require (
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/lestrrat-go/strftime v1.0.4 // indirect
 	github.com/mix-go/dotenv v1.0.22
-	github.com/mix-go/xcli v1.1.1
+	github.com/mix-go/xcli v1.1.2
 	github.com/mix-go/xdi v1.1.1
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/sirupsen/logrus v1.6.0
