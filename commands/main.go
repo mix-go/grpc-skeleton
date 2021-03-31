@@ -7,18 +7,18 @@ import (
 var Commands = []*xcli.Command{
 	{
 		Name:  "grpc:server",
-		Usage: "gRPC server demo",
+		Short: "gRPC server demo",
 		Options: []*xcli.Option{
 			{
 				Names: []string{"d", "daemon"},
-				Usage: "Run in the background",
+				Short: "Run in the background",
 			},
 		},
 		RunI: &GrpcServerCommand{},
 	},
 	{
 		Name:  "grpc:client",
-		Usage: "gRPC client demo",
+		Short: "gRPC client demo",
 		RunI:  &GrpcClientCommand{},
 	},
 }
