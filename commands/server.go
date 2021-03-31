@@ -2,7 +2,7 @@ package commands
 
 import (
 	"github.com/mix-go/dotenv"
-	"github.com/mix-go/grpc-skeleton/globals"
+	"github.com/mix-go/grpc-skeleton/di"
 	pb "github.com/mix-go/grpc-skeleton/protos"
 	"github.com/mix-go/grpc-skeleton/services"
 	"github.com/mix-go/xcli/flag"
@@ -15,7 +15,7 @@ import (
 	"syscall"
 )
 
-var Listener net.Listener
+var listener net.Listener
 
 type GrpcServerCommand struct {
 }
@@ -26,14 +26,14 @@ func (t *GrpcServerCommand) Main() {
 	}
 
 	addr := dotenv.Getenv("GIN_ADDR").String(":8080")
-	logger := globals.Logrus()
+	logger := di.Logrus()
 
 	// listen
 	listener, err := net.Listen("tcp", addr)
 	if err != nil {
 		panic(err)
 	}
-	Listener = listener
+	listener = listener
 
 	// signal
 	ch := make(chan os.Signal)
