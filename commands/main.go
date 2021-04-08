@@ -11,7 +11,7 @@ var Commands = []*xcli.Command{
 		Options: []*xcli.Option{
 			{
 				Names: []string{"d", "daemon"},
-				Short: "Run in the background",
+				Usage: "Run in the background",
 			},
 		},
 		RunI: &GrpcServerCommand{},
