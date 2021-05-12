@@ -15,7 +15,7 @@ import (
 	"syscall"
 )
 
-var listener net.Listener
+var netListener net.Listener
 
 type GrpcServerCommand struct {
 }
@@ -33,7 +33,7 @@ func (t *GrpcServerCommand) Main() {
 	if err != nil {
 		panic(err)
 	}
-	listener = listener
+	netListener = listener
 
 	// signal
 	ch := make(chan os.Signal)
