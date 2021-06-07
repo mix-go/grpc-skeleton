@@ -11,7 +11,6 @@ replace (
 require (
 	github.com/go-redis/redis/v8 v8.8.0
 	github.com/go-sql-driver/mysql v1.5.0
-	github.com/golang/protobuf v1.4.2
 	github.com/jinzhu/configor v1.2.0
 	github.com/mix-go/dotenv v1.1.11
 	github.com/mix-go/xcli v1.1.11
