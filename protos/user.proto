@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-package go.micro.grpc.user;
+package micro.grpc.user;
+option php_metadata_namespace = "Micro/Grpc/User/GPBMetadata";
 option go_package = "/;protos";
 
 service User {
